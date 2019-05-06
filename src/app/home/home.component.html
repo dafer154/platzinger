@@ -1,0 +1,8 @@
+<input type="text" placeholder="Buscar Amigo" [(ngModel)]="query"/>
+<div>
+  <div *ngFor="let friend of friends | search: query; let i= index">
+    <div>
+        <a routerLink="/conversation/{{friend.uid}}">{{i}}. {{friend.nick}} -- {{friend.age}}</a>
+    </div>
+  </div>
+</div>
